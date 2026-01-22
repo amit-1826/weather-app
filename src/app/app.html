@@ -1,0 +1,36 @@
+<div class="container">
+  <app-header />
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title" class="hero-title">How's the sky looking today?</h1>
+    <form class="search-container mb-lg" role="search">
+      <label for="place" class="visually-hidden">Search location</label>
+
+      <div class="search-box">
+        <img
+          class="search-icon"
+          src="../assets/images/icon-search.svg"
+          alt=""
+        />
+        <input
+          id="place"
+          class="input"
+          type="text"
+          placeholder="Search for a place"
+          name="place"
+        />
+      </div>
+
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+  </section>
+
+  <main class="main-content">
+    <section class="forecast">
+      <app-current-forecast />
+      <app-daily-forecast />
+    </section>
+    <app-hourly-forecast />
+  </main>
+</div>
+
+<app-footer />
