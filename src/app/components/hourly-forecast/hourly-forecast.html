@@ -13,132 +13,136 @@
   </div>
 
   <div class="hourly-forecast-content">
-    <div class="card hour">
-      <div class="forecast-time">
-        <img
-          class="hourly-forecast-time-icon"
-          src="../assets/images/icon-partly-cloudy.webp"
-          alt="Cloudy Weather Image"
-        />
-        <div class="time">
-          <span>2 PM</span>
+    @if (!stateService.isLoading()) {
+      <div class="card hour">
+        <div class="forecast-time">
+          <img
+            class="hourly-forecast-time-icon"
+            src="../assets/images/icon-partly-cloudy.webp"
+            alt="Cloudy Weather Image"
+          />
+          <div class="time">
+            <span>2 PM</span>
+          </div>
+        </div>
+        <div class="forecast-value">
+          <span>20</span>
         </div>
       </div>
-      <div class="forecast-value">
-        <span>20</span>
-      </div>
-    </div>
 
-    <div class="card hour">
-      <div class="forecast-time">
-        <img
-          class="hourly-forecast-time-icon"
-          src="../assets/images/icon-sunny.webp"
-          alt="Sunny Weather Image"
-        />
-        <div class="time">
-          <span>3 PM</span>
+      <div class="card hour">
+        <div class="forecast-time">
+          <img
+            class="hourly-forecast-time-icon"
+            src="../assets/images/icon-sunny.webp"
+            alt="Sunny Weather Image"
+          />
+          <div class="time">
+            <span>3 PM</span>
+          </div>
+        </div>
+        <div class="forecast-value">
+          <span>20</span>
         </div>
       </div>
-      <div class="forecast-value">
-        <span>20</span>
-      </div>
-    </div>
 
-    <div class="card hour">
-      <div class="forecast-time">
-        <img
-          class="hourly-forecast-time-icon"
-          src="../assets/images/icon-storm.webp"
-          alt="Storm Weather Image"
-        />
-        <div class="time">
-          <span>4 PM</span>
+      <div class="card hour">
+        <div class="forecast-time">
+          <img
+            class="hourly-forecast-time-icon"
+            src="../assets/images/icon-storm.webp"
+            alt="Storm Weather Image"
+          />
+          <div class="time">
+            <span>4 PM</span>
+          </div>
+        </div>
+        <div class="forecast-value">
+          <span>22</span>
         </div>
       </div>
-      <div class="forecast-value">
-        <span>22</span>
-      </div>
-    </div>
 
-    <div class="card hour">
-      <div class="forecast-time">
-        <img
-          class="hourly-forecast-time-icon"
-          src="../assets/images/icon-snow.webp"
-          alt="Snow Weather Image"
-        />
-        <div class="time">
-          <span>5 PM</span>
+      <div class="card hour">
+        <div class="forecast-time">
+          <img
+            class="hourly-forecast-time-icon"
+            src="../assets/images/icon-snow.webp"
+            alt="Snow Weather Image"
+          />
+          <div class="time">
+            <span>5 PM</span>
+          </div>
+        </div>
+        <div class="forecast-value">
+          <span>25</span>
         </div>
       </div>
-      <div class="forecast-value">
-        <span>25</span>
-      </div>
-    </div>
 
-    <div class="card hour">
-      <div class="forecast-time">
-        <img
-          class="hourly-forecast-time-icon"
-          src="../assets/images/icon-rain.webp"
-          alt="Rain Weather Image"
-        />
-        <div class="time">
-          <span>6 PM</span>
+      <div class="card hour">
+        <div class="forecast-time">
+          <img
+            class="hourly-forecast-time-icon"
+            src="../assets/images/icon-rain.webp"
+            alt="Rain Weather Image"
+          />
+          <div class="time">
+            <span>6 PM</span>
+          </div>
+        </div>
+        <div class="forecast-value">
+          <span>26</span>
         </div>
       </div>
-      <div class="forecast-value">
-        <span>26</span>
-      </div>
-    </div>
 
-    <div class="card hour">
-      <div class="forecast-time">
-        <img
-          class="hourly-forecast-time-icon"
-          src="../assets/images/icon-partly-cloudy.webp"
-          alt="Party CLoudy Weather Image"
-        />
-        <div class="time">
-          <span>7 PM</span>
+      <div class="card hour">
+        <div class="forecast-time">
+          <img
+            class="hourly-forecast-time-icon"
+            src="../assets/images/icon-partly-cloudy.webp"
+            alt="Party CLoudy Weather Image"
+          />
+          <div class="time">
+            <span>7 PM</span>
+          </div>
+        </div>
+        <div class="forecast-value">
+          <span>28</span>
         </div>
       </div>
-      <div class="forecast-value">
-        <span>28</span>
-      </div>
-    </div>
 
-    <div class="card hour">
-      <div class="forecast-time">
-        <img
-          class="hourly-forecast-time-icon"
-          src="../assets/images/icon-fog.webp"
-          alt="Fog Weather Image"
-        />
-        <div class="time">
-          <span>8 PM</span>
+      <div class="card hour">
+        <div class="forecast-time">
+          <img
+            class="hourly-forecast-time-icon"
+            src="../assets/images/icon-fog.webp"
+            alt="Fog Weather Image"
+          />
+          <div class="time">
+            <span>8 PM</span>
+          </div>
+        </div>
+        <div class="forecast-value">
+          <span>28</span>
         </div>
       </div>
-      <div class="forecast-value">
-        <span>28</span>
-      </div>
-    </div>
 
-    <div class="card hour">
-      <div class="forecast-time">
-        <img
-          class="hourly-forecast-time-icon"
-          src="../assets/images/icon-drizzle.webp"
-          alt="Drizzle Weather Image"
-        />
-        <div class="time">
-          <span>9 PM</span>
+      <div class="card hour">
+        <div class="forecast-time">
+          <img
+            class="hourly-forecast-time-icon"
+            src="../assets/images/icon-drizzle.webp"
+            alt="Drizzle Weather Image"
+          />
+          <div class="time">
+            <span>9 PM</span>
+          </div>
+        </div>
+        <div class="forecast-value">
+          <span>29</span>
         </div>
       </div>
-      <div class="forecast-value">
-        <span>29</span>
-      </div>
-    </div>
+    } @else {
+      <app-loader />
+    }
   </div>
 </aside>

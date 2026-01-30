@@ -2,6 +2,12 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
 
+## NOTE
+
+This web app fetches user's IP location (lat and long) by default and based on that it calls open meteo api to get the weather data.
+When clicked "My Location" it first asks the user to get the current location, when permitted it again calls the same open meteo api to get the weather data.
+Note: Most of the weather data (daily forecast, hourly forecast) are static.
+
 ## Development server
 
 To start a local development server, run:

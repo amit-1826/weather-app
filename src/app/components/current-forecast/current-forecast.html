@@ -1,33 +1,53 @@
 <div class="current-forecast">
   <div class="current-temperature">
-    <div class="place">
-      <p class="place-name mb-sm">Berlin, Germany</p>
-      <p class="place-date">Tuesday, Aug 5, 2026</p>
+    @if (!stateService.isLoading()) {
+      <div class="place">
+        <p class="place-name mb-sm">
+          {{ userAddress()?.city }}, {{ userAddress()?.country }}
+        </p>
+        <p class="place-date">
+          {{ currentForecast()?.time | date: "EEEE, MMM dd, y" }}
+        </p>
+      </div>
+      <div class="temperature">
+        <img
+          class="temp-icon"
+          src="../assets/images/icon-sunny.webp"
+          alt="Sunny day image"
+        />
+        <span class="temperature-value">{{
+          currentForecast()?.temperature_2m | number: "1.0-0"
+        }}</span>
+        <span class="temperature-unit">°C</span>
+      </div>
+    } @else {
+      <app-loader />
+    }
+  </div>
+  @if (!stateService.isLoading()) {
+    <div class="card temp-misc">
+      <p class="temp-label">Feels Like</p>
+      <strong class="temp-value">{{
+        currentForecast()?.apparent_temperature | number: "1.0-0"
+      }}</strong>
     </div>
-    <div class="temperature">
-      <img
-        class="temp-icon"
-        src="../assets/images/icon-sunny.webp"
-        alt="Sunny day image"
-      />
-      <span class="temperature-value">20</span>
-      <span class="temperature-unit">°C</span>
+    <div class="card temp-misc">
+      <p class="temp-label">Humidity</p>
+      <strong class="temp-value"
+        >{{ currentForecast()?.relative_humidity_2m }}%</strong
+      >
     </div>
-  </div>
-  <div class="card temp-misc">
-    <p class="temp-label">Feels Like</p>
-    <strong class="temp-value">18</strong>
-  </div>
-  <div class="card temp-misc">
-    <p class="temp-label">Humidity</p>
-    <strong class="temp-value">46%</strong>
-  </div>
-  <div class="card temp-misc">
-    <p class="temp-label">Wind</p>
-    <strong class="temp-value">14 km/h</strong>
-  </div>
-  <div class="card temp-misc">
-    <p class="temp-label">Precipitation</p>
-    <strong class="temp-value">0 mm</strong>
-  </div>
+    <div class="card temp-misc">
+      <p class="temp-label">Wind</p>
+      <strong class="temp-value"
+        >{{ currentForecast()?.wind_speed_10m | number: "1.0-0" }} km/h</strong
+      >
+    </div>
+    <div class="card temp-misc">
+      <p class="temp-label">Precipitation</p>
+      <strong class="temp-value"
+        >{{ currentForecast()?.precipitation | number: "1.0-0" }} mm</strong
+      >
+    </div>
+  }
 </div>
